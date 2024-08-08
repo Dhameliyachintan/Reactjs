@@ -1,0 +1,23 @@
+{
+  "files": {
+    "main.css": "/my-app/static/css/main.cd736ec2.css",
+    "main.js": "/my-app/static/js/main.f14ff7c7.js",
+    "static/js/592.7f72a991.chunk.js": "/my-app/static/js/592.7f72a991.chunk.js",
+    "static/media/phone-laptop.png": "/my-app/static/media/phone-laptop.140088f15a31bae34df4.png",
+    "static/media/img-square2.png": "/my-app/static/media/img-square2.2a001c88d4d9edf6f3eb.png",
+    "static/media/laptop.png": "/my-app/static/media/laptop.0b7f27d1d22bb81cdfa6.png",
+    "static/media/phone.png": "/my-app/static/media/phone.2be003d22df3c57db6cd.png",
+    "static/media/logo.svg": "/my-app/static/media/logo.6ce24c58023cc2f8fd88fe9d219db6c6.svg",
+    "index.html": "/my-app/index.html",
+    "static/media/wrench-adjustable.svg": "/my-app/static/media/wrench-adjustable.6b56ce232c6e568dd26b06247350dd4d.svg",
+    "static/media/download.svg": "/my-app/static/media/download.9c2f4942942a34ee567d685cb2cfd035.svg",
+    "static/media/caret-down-square-fill.svg": "/my-app/static/media/caret-down-square-fill.8b3c206618f6603bf7b1ca4100d94281.svg",
+    "main.cd736ec2.css.map": "/my-app/static/css/main.cd736ec2.css.map",
+    "main.f14ff7c7.js.map": "/my-app/static/js/main.f14ff7c7.js.map",
+    "592.7f72a991.chunk.js.map": "/my-app/static/js/592.7f72a991.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.cd736ec2.css",
+    "static/js/main.f14ff7c7.js"
+  ]
+}
