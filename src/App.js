@@ -26,15 +26,16 @@ import BackgroundColor from '../src/BackgroundColor';
 import Color from './component/Color.js';
 import Textform from './component/Textform.js';
 import Abouts from './component/Abouts.js';
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import Alert from './component/Alert.js';
 
 
 
 
 function App() {
-  const [darkmode, setdarkmode] = useState('light');
+  const [darkmode, setDarkmode] = useState('light');
   const [alert, setAlert] = useState(null);
+  const [title, setTitle] = useState('TextUtils - Light Mode');
 
   const showAlert = (message, type) => {
     setAlert({
@@ -47,29 +48,59 @@ function App() {
   }
 
   const removeBodyClasses = () => {
-    document.body.classList.remove("bg-light")
-    document.body.classList.remove("bg-dark")
-    document.body.classList.remove("bg-warning")
-    document.body.classList.remove("bg-danger")
-    document.body.classList.remove("bg-success")
+    document.body.classList.remove("bg-primary","bg-light", "bg-dark", "bg-warning", "bg-danger", "bg-success");
   }
 
-  const togglemode = (cls) => {
-    console.log(cls);
-    removeBodyClasses();
-    document.body.classList.add('bg-' + cls)
-    if(darkmode === "light") {
-      setdarkmode("dark")
-      document.body.style.backgroundColor = "gray"
-      document.title = "TextUtils - DarkMode"
-      showAlert("Dark", "success")
-    } else {
-      setdarkmode("light")
-      document.body.style.backgroundColor = "white"
-      document.title = "TextUtils - Light mode"
-      showAlert("Light", "success")
+    const togglemode = (cls) => {
+      console.log(cls);
+      removeBodyClasses();
+      if (cls) {
+        document.body.classList.add('bg-' + cls);
+        showAlert(cls.charAt(0).toUpperCase() + cls.slice(1) + ' mode', 'success');
+        if (cls === 'light') {
+          document.body.style.color = 'black';
+          setTitle("TextUtils - Light Mode");
+        } else {
+          document.body.style.color = 'white';
+          setTitle(`TextUtils - ${cls.charAt(0).toUpperCase() + cls.slice(1)} Mode`);
+        }
+        setDarkmode(cls); 
+      } else {
+        if (darkmode === "light") {
+          // Switch to dark mode
+          setDarkmode("dark");
+          document.body.style.backgroundColor = "black";
+          document.body.style.color = "white";
+          document.title = "TextUtils - Dark Mode";
+          showAlert("Dark mode", "success");
+        } else {
+          // Switch to light mode
+          setDarkmode("light");
+          document.body.style.backgroundColor = "white";
+          document.body.style.color = "black";
+          document.title = "TextUtils - Light Mode";
+          showAlert("Light mode", "success");
+        }
+    
+      }
+      
+      // if(darkmode === "light") {
+      //   setdarkmode("dark")
+      //   document.body.style.backgroundColor = "gray"
+      //   document.title = "TextUtils - DarkMode"
+      //   showAlert("Dark", "success")
+      // } else {
+      //   setdarkmode("light")
+      //   document.body.style.backgroundColor = "white"
+      //   document.title = "TextUtils - Light mode"
+      //   showAlert("Light", "success")
+      // }
     }
-  }
+
+    useEffect(() => {
+      document.title = title;
+    }, [title]);
+  
 
  
   return (

@@ -44,12 +44,7 @@ export default function Textform(props) {
 
   return (
     <div>
-      <div
-        className="container"
-        style={{
-          color: props.mode === "dark" ? "white" : "black"
-        }}
-      >
+          <div className="container" style={{ color: props.mode === "dark" ? "white" : "black" }}>
         <h1>
           {props.heading}
         </h1>
@@ -58,7 +53,7 @@ export default function Textform(props) {
             Example area
           </label>
           <textarea
-            className="form-control"
+            className="form-control"  
             id="myBox"
             rows="5"
             value={text}
@@ -66,74 +61,70 @@ export default function Textform(props) {
             onChange={handleChange}
             // style={{ fontSize: `${fontSize}px` }} // Apply font size to textarea
             style={{
-              backgroundColor: props.mode === "dark" ? "gray" : "white",
-              color: props.mode === "dark" ? "white" : "black"
+              backgroundColor: props.mode === "light" ? "gray" : "white",
+              color: props.mode === "light" ? "white" : "black",
+              fontSize: `${fontSize}px` // Apply font size to textarea
             }}
           />
           <button
-            className="btn btn-primary mt-2 mt-md-2 my-2 ms-2 ms-md-2"
+            className={props.mode === "btn mt-2 mt-md-2 my-2 ms-2 ms-md-2 btn-primary" ? "btn mt-2 mt-md-2 my-2 ms-2 ms-md-2 btn-dark" : "btn btn-white mt-2 mt-md-2 my-2 ms-2 ms-md-2 bg-white text-dark border"  }
             disabled={text.length === 0}
             onClick={handleUppercaseClick}
           >
             Convert to Uppercase
           </button>
           <button
-            className="btn btn-secondary mt-2 mt-md-2 my-2 ms-2 ms-md-2"
+            className={props.mode === "btn btn-secondary mt-2 mt-md-2 my-2 ms-2 ms-md-2" ? "btn mt-2 mt-md-2 my-2 ms-2 ms-md-2 btn-dark" : "btn btn-white mt-2 mt-md-2 my-2 ms-2 ms-md-2 bg-white text-dark border"}
             disabled={text.length === 0}
             onClick={handleLowercaseClick}
           >
             Convert to Lowercase
           </button>
           <button
-            className="btn btn-secondary mt-2 mt-md-2 my-2 ms-2 ms-md-2"
+            className={props.mode === "btn btn-secondary mt-2 mt-md-2 my-2 ms-2 ms-md-2" ? "btn mt-2 mt-md-2 my-2 ms-2 ms-md-2 btn-dark" : "btn btn-white mt-2 mt-md-2 my-2 ms-2 ms-md-2 bg-white text-dark border"}
             disabled={text.length === 0}
             onClick={handleReverseClick}
           >
             Reverse Text
           </button>
           <button
-            className="btn btn-danger mt-2 mt-md-2 my-2 ms-2 ms-md-2"
+            className={props.mode === "btn btn-danger mt-2 mt-md-2 my-2 ms-2 ms-md-2" ? "btn btn-danger mt-2 mt-md-2 my-2 ms-2 ms-md-2" : "btn btn-white mt-2 mt-md-2 my-2 ms-2 ms-md-2 bg-white text-dark border"}
             disabled={text.length === 0}
             onClick={handleClearClick}
           >
             Clear Text
           </button>
           <button
-            className="btn btn-success mt-2 mt-md-1 ms-2 ms-md-3 me-md-2"
+            className={props.mode === "btn btn-success mt-2 mt-md-2 my-2 ms-2 ms-md-2" ? "btn btn-dark mt-2 mt-md-2 my-2 ms-2 ms-md-2" : "btn btn-white mt-2 mt-md-2 my-2 ms-2 ms-md-2 bg-white text-dark border"}
             disabled={text.length === 0}
             onClick={handleCopyClick}
           >
             Copy Text
           </button>
           <button
-            className="btn btn-warning mt-2 mt-md-1 ms-2 ms-md-0"
+            className={props.mode === "btn btn-warning mt-2 mt-md-2 my-2 ms-2 ms-md-2" ? "btn mt-2 mt-md-2 my-2 ms-2 ms-md-2 btn-dark" : "btn btn-white mt-2 mt-md-2 my-2 ms-2 ms-md-2 bg-white text-dark border"}
             disabled={text.length === 0}
             onClick={handleRemoveExtraSpacesClick}
           >
             Remove Extra Spaces
           </button>
           <button
-            className="btn btn-info mt-2 mt-md-1 ms-2 ms-md-3"
+            className={props.mode === "btn btn-info mt-2 mt-md-2 my-2 ms-2 ms-md-2" ? "btn mt-2 mt-md-2 my-2 ms-2 ms-md-2 btn-dark" : "btn btn-white mt-2 mt-md-2 my-2 ms-2 ms-md-2 bg-white text-dark border"}
             disabled={text.length === 0}
             onClick={handleIncreaseFontSizeClick}
           >
             Increase Font Size
           </button>
           <button
-            className="btn btn-info mt-2 mt-md-1 ms-2 ms-md-3"
+            className={props.mode === "btn btn-info mt-2 mt-md-2 my-2 ms-2 ms-md-2" ? "btn mt-2 mt-md-2 my-2 ms-2 ms-md-2 btn-dark" : "btn btn-white mt-2 mt-md-2 my-2 ms-2 ms-md-2 bg-white text-dark border"}
             disabled={text.length === 0}
             onClick={handleDecreaseFontSizeClick}
           >
             Decrease Font Size
           </button>
 
-          <div
-            className="container"
-            style={{
-              color: props.mode === "dark" ? "white" : "black"
-            }}
-          >
-            <div className="number-world">
+          <div className="container" style={{ color: props.mode === "dark" ? "white" : "black" }}>
+          <div className="number-world">
               <h1>text summary</h1>
               <p>
                 {
