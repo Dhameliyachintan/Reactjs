@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/Reactjs/static/css/main.cd736ec2.css",
-    "main.js": "/Reactjs/static/js/main.5384f0ed.js",
+    "main.js": "/Reactjs/static/js/main.60eab396.js",
     "static/js/592.7f72a991.chunk.js": "/Reactjs/static/js/592.7f72a991.chunk.js",
     "static/media/phone-laptop.png": "/Reactjs/static/media/phone-laptop.140088f15a31bae34df4.png",
     "static/media/img-square2.png": "/Reactjs/static/media/img-square2.2a001c88d4d9edf6f3eb.png",
@@ -13,11 +13,11 @@
     "static/media/download.svg": "/Reactjs/static/media/download.9c2f4942942a34ee567d685cb2cfd035.svg",
     "static/media/caret-down-square-fill.svg": "/Reactjs/static/media/caret-down-square-fill.8b3c206618f6603bf7b1ca4100d94281.svg",
     "main.cd736ec2.css.map": "/Reactjs/static/css/main.cd736ec2.css.map",
-    "main.5384f0ed.js.map": "/Reactjs/static/js/main.5384f0ed.js.map",
+    "main.60eab396.js.map": "/Reactjs/static/js/main.60eab396.js.map",
     "592.7f72a991.chunk.js.map": "/Reactjs/static/js/592.7f72a991.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.cd736ec2.css",
-    "static/js/main.5384f0ed.js"
+    "static/js/main.60eab396.js"
   ]
 }
