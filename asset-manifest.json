@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/my-app/static/css/main.cd736ec2.css",
-    "main.js": "/my-app/static/js/main.f14ff7c7.js",
+    "main.js": "/my-app/static/js/main.8f8c6925.js",
     "static/js/592.7f72a991.chunk.js": "/my-app/static/js/592.7f72a991.chunk.js",
     "static/media/phone-laptop.png": "/my-app/static/media/phone-laptop.140088f15a31bae34df4.png",
     "static/media/img-square2.png": "/my-app/static/media/img-square2.2a001c88d4d9edf6f3eb.png",
@@ -13,11 +13,11 @@
     "static/media/download.svg": "/my-app/static/media/download.9c2f4942942a34ee567d685cb2cfd035.svg",
     "static/media/caret-down-square-fill.svg": "/my-app/static/media/caret-down-square-fill.8b3c206618f6603bf7b1ca4100d94281.svg",
     "main.cd736ec2.css.map": "/my-app/static/css/main.cd736ec2.css.map",
-    "main.f14ff7c7.js.map": "/my-app/static/js/main.f14ff7c7.js.map",
+    "main.8f8c6925.js.map": "/my-app/static/js/main.8f8c6925.js.map",
     "592.7f72a991.chunk.js.map": "/my-app/static/js/592.7f72a991.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.cd736ec2.css",
-    "static/js/main.f14ff7c7.js"
+    "static/js/main.8f8c6925.js"
   ]
 }
