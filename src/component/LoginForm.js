@@ -60,13 +60,11 @@ const LoginForm = () => {
         if (isValid === false) {
             const userData = fetchedData.find(user => user.email === formData.email);
             if (!userData) {
-                // console.log('invalid email');
                 toast.error("invalid email");
                 return;
             }
 
             if (userData.password !== formData.password) {
-                // console.log('Incorrect password');
                 toast.error("Incorrect password");
                 return;
             }

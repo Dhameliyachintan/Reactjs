@@ -1,75 +1,70 @@
 import React, { useState, useEffect } from 'react';
-import { useDispatch, useSelector } from 'react-redux';
-import { useParams, useNavigate } from 'react-router-dom';
-import { fetchData, updateDataSuccess, updatedata } from '../Redux/Form.action'; // Assuming you have an action creator named `updateDataSuccess`
+import { useDispatch } from 'react-redux';
+import { useLocation, useNavigate } from 'react-router-dom';
+import { updatedata } from '../Redux/Form.action'; // Import your CSS file
 
 export default function Edit() {
-    const { id } = useParams();
     const dispatch = useDispatch();
     const navigate = useNavigate();
-    const user = useSelector((state) => state.itemsdata.itemsdata)
-    const [formData, setFormData] = useState({
-        name: '',
-        email: '',
-        password: '',
-    });
+    const location = useLocation();
+    const { formData } = location.state;
+    const [formState, setFormState] = useState(formData);
 
     useEffect(() => {
-        dispatch(fetchData(id));
-    }, []);
-
-    useEffect(() => {
-        if (user) {
-            setFormData(user);
+        if (!formData) {
+            navigate('/User');
         }
-    }, [user]);
+    }, [formData, navigate]);
 
     const handleChange = (e) => {
         const { name, value } = e.target;
-        setFormData((prevData) => ({
-            ...prevData,
+        setFormState(prevState => ({
+            ...prevState,
             [name]: value,
         }));
     };
 
     const handleSubmit = (e) => {
         e.preventDefault();
-        dispatch(updatedata(formData, formData.id));
+        dispatch(updatedata(formState, formState.id));
         navigate('/User');
     };
 
     return (
-        <div>
+        <div className="edit-form-container"> {/* Apply CSS class for container */}
             <h2>Edit Form</h2>
             <form onSubmit={handleSubmit}>
-                <div>
+                <div className="form-group"> {/* Apply CSS class for form group */}
                     <label>Name:</label>
                     <input
+                        className="form-control"
                         type="text"
                         name="name"
-                        value={formData.name}
+                        value={formState.name || ''}
                         onChange={handleChange}
                     />
                 </div>
-                <div>
+                <div className="form-group">
                     <label>Email:</label>
                     <input
+                        className="form-control"
                         type="email"
                         name="email"
-                        value={formData.email}
+                        value={formState.email || ''}
                         onChange={handleChange}
                     />
                 </div>
-                <div>
+                <div className="form-group">
                     <label>Password:</label>
                     <input
+                        className="form-control"
                         type="password"
                         name="password"
-                        value={formData.password}
+                        value={formState.password || ''}
                         onChange={handleChange}
                     />
                 </div>
-                <button type="submit">Submit</button>
+                <button className="btn-submit" type="submit">Submit</button> {/* Apply CSS class for button */}
             </form>
         </div>
     );

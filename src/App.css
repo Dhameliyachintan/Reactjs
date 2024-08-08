@@ -1,3 +1,10 @@
+/* button.accordion-button {
+  background-color: #000;
+  color: #fff;
+} */
+
+
+
 .App {
   text-align: center;
 }
@@ -11,6 +18,20 @@
   .App-logo {
     animation: App-logo-spin infinite 20s linear;
   }
+}
+
+/* src/App.css */
+.buttons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  font-family: Arial, sans-serif;
+  border: none;
+}
+
+.buttons button {
+  border: none;
 }
 
 .App-header {
@@ -459,4 +480,32 @@ h2 {
 .unique-main .unique-part p {
   text-shadow: 0 1px 1px rgba(0, 0, 0, 0.18);
   color: rgba(29, 29, 29, 0.65);
+}
+
+.edit-form-container {
+  width: 50%;
+  margin: auto;
+}
+
+.form-group {
+  margin-bottom: 1rem;
+}
+
+.form-control {
+  width: 100%;
+  padding: 0.5rem;
+  font-size: 1rem;
+}
+
+.btn-submit {
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+  font-size: 1rem;
+}
+
+.btn-submit:hover {
+  background-color: #0056b3;
 }

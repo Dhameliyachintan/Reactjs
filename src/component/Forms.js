@@ -7,7 +7,7 @@ import { useNavigate } from "react-router-dom";
 
 export default function Forms() {
     const [formData, setFormData] = useState({
-        username: '',
+        name: '',
         email: '',
         password: '',
     });
@@ -22,15 +22,15 @@ export default function Forms() {
 
     const validateForm = () => {
         const newErrors = {};
-        const usernameRegex = /^[a-zA-Z\-]+$/;
+        const nameRegex = /^[a-zA-Z\-]+$/;
         const passwordRegex = /^.{6,}$/;
         const emailRegex = /^([\w.%+-]+)@([\w-]+\.)+([\w]{2,})$/i;
 
-        if (formData.username.trim() === '') {
-            newErrors.username = 'Please enter a valid username';
-        } else if (!formData.username.trim().match(usernameRegex)) {
-            newErrors.username =
-                'Username must be between 3 and 16 characters and can only contain letters, numbers, and underscores';
+        if (formData.name.trim() === '') {
+            newErrors.name = 'Please enter a valid name';
+        } else if (!formData.name.trim().match(nameRegex)) {
+            newErrors.name =
+                'name must be between 3 and 16 characters and can only contain letters, numbers, and underscores';
         }
 
         if (!formData.email.trim().match(emailRegex)) {
@@ -70,19 +70,19 @@ export default function Forms() {
         <div>
             <form onSubmit={handleSubmit}>
                 <div>
-                    <label>Username:</label>
+                    <label>name:</label>
                     <input
                         type="text"
-                        name="username"
-                        value={formData.username}
+                        name="name"
+                        value={formData.name}
                         onChange={handleChange}
                     />
-                    {errors.username && <span className="error">{errors.username}</span>}
+                    {errors.name && <span className="error">{errors.name}</span>}
                 </div>
                 <div>
                     <label>Email:</label>
                     <input
-                        type="email"
+                        type="text"
                         name="email"
                         value={formData.email}
                         onChange={handleChange}
